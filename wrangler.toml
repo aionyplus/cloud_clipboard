@@ -3,6 +3,11 @@ type = "python"
 account_id = "19e149e307f00d51d876002ea98ae316"
 workers_dev = true
 
-[env.production]
-route = "clip.freecdn.shop"
-zone_id = "5183f2af56e7a3e0fe8e91571b404a27"
+[site]
+bucket = "./public"
+entry-point = "workers"
+
+[build]
+command = "pip install -r requirements.txt && python app.py"
+[build.upload]
+format = "modules"

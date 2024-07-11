@@ -1,0 +1,22 @@
+service: cloud-clipboard
+
+provider:
+  name: cloudflare
+  config:
+    accountId: 19e149e307f00d51d876002ea98ae316
+    zoneId: 5183f2af56e7a3e0fe8e91571b404a27
+    route: clip.freecdn.shop
+
+plugins:
+  - serverless-python-requirements
+
+functions:
+  app:
+    handler: app.app
+    events:
+      - http:
+          path: /clipboard/{name}
+          method: get
+      - http:
+          path: /clipboard/{name}
+          method: post

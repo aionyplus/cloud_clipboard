@@ -1,0 +1,14 @@
+{
+  "name": "cloud-clipboard",
+  "version": "1.0.0",
+  "description": "A simple cloud clipboard application using Cloudflare Workers",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "wrangler": "^2.0.0"
+  }
+}
+
